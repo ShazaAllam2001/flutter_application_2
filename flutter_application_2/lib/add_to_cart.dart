@@ -28,24 +28,28 @@ class AddToCartState extends State<AddToCart> {
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: (MediaQuery.of(context).size.width / 150).floor(),
+          crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
-        itemCount: 5,
+        itemCount: productImages.length,
         itemBuilder: (context, index) {
           return Card(
             elevation: 4,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset(productImages[index], height: 100, fit: BoxFit.cover),
+                Image.asset(
+                  productImages[index], 
+                  height: MediaQuery.of(context).size.height / 7, // use of Media Query
+                  fit: BoxFit.cover
+                ),
                           
                 Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: Text(
                     'Product ${index + 1}', 
-                    style: TextStyle(fontSize: 16)
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
                           

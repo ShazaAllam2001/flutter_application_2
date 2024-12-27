@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_application_2/addToCart.dart';
+import 'package:flutter_application_2/add_to_cart.dart';
 import 'package:flutter_application_2/hot_offers.dart';
 import 'package:flutter_application_2/my_products.dart';
 

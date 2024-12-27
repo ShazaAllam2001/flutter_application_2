@@ -30,7 +30,7 @@ class HotOffersState extends State<HotOffers> {
         ),
 
         SizedBox(
-          height: 200,
+          height: MediaQuery.of(context).size.height / 5, // use of Media Query
           child: ListView.builder( // offers ListView
             scrollDirection: Axis.horizontal,
             itemCount: offerImages.length,
